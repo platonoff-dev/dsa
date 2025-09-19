@@ -1,0 +1,8 @@
+version: "3"
+tasks:
+  new:*:
+    vars:
+      DIR: "{{index .MATCH 0}}"
+    cmds:
+      - mkdir -p {{.DIR}}
+      - touch {{.DIR}}/solution.go
