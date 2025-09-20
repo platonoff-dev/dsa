@@ -6,3 +6,6 @@ tasks:
     cmds:
       - mkdir -p {{.DIR}}
       - touch {{.DIR}}/solution.go
+      - echo "package _{{.DIR}}" | sed "s/-/_/g" > {{.DIR}}/solution.go
+      - touch {{.DIR}}/solution_test.go
+      - echo "package _{{.DIR}}" | sed "s/-/_/g" > {{.DIR}}/solution_test.go
